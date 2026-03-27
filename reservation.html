@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Booker</title>
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="person">
+            <h1>Book a table in Resto</h1>
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="tel" name="phone" id="phone" placeholder="Phone">
+            <input type="date" name="date" id="date" placeholder="Date">
+            <input type="number" name="guests" id="guests" placeholder="Number of Guests">
+            <button onclick="returnTimes()">Book Now</button>
+        </div>
+        <div class="table"> 
+            <h2>Available Times</h2>
+            <p id="table"></p>
+        </div>
+    </main>
+    <script src="reservation.js"></script>
+</body>
+</html>
