@@ -10,8 +10,8 @@ class Person {
 }
 tableTimes = ["18:00", "19:00", "20:00", "21:00"];
 function returnTimes() {
-    if (document.getElementById("date").value == "") {
-        alert("Please select a date!");
+    if (document.getElementById("name").value == "" || document.getElementById("email").value == "" || document.getElementById("phone").value == "" || document.getElementById("date").value == "" || document.getElementById("guests").value == "") {
+        alert("Please fill all the fields!");
         return;
     }
     document.getElementById("table-h2").innerHTML = "Available Times";
