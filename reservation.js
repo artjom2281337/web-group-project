@@ -1,32 +1,39 @@
 class Person {
-    constructor(name, email, phone, date, time) {
+    constructor(name, email, phone, date, time, guests) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.date = date;
         this.time = time;
-    }
-}
-class Table {
-    constructor(id, capacity, time, date) {
-        this.id = id;
-        this.capacity = capacity;
-        this.time = time;
-        this.date = date;
+        this.guests = guests;
     }
 }
 tableTimes = ["18:00", "19:00", "20:00", "21:00"];
-function reserveTable() {
+function returnTimes() {
+    document.getElementById("table-h2").innerHTML = "Available Times";
+    for (let i = 0; i < tableTimes.length; i++) {
+        document.getElementById("table").innerHTML += `<button onclick="reserveTable('${tableTimes[i]}')">${tableTimes[i]}</button>`;
+    }
+}
+function reserveTable(time) {
     name = document.getElementById("name").value;
     email = document.getElementById("email").value;
     phone = document.getElementById("phone").value;
     date = document.getElementById("date").value;
-    time = document.getElementById("time").value;
+    guests = document.getElementById("guests").value;
 
-    let newPerson = new Person(name, email, phone, date, time);
-}
-function returnTimes() {
-    for (let i = 0; i < tableTimes.length; i++) {
-        document.getElementById("table").innerHTML += tableTimes[i] + " ";
-    }
+    let newPerson = new Person(name, email, phone, date, time, guests);
+    document.getElementById("details").innerHTML = `<h3>Table Reservated!</h3><br>
+                                                    <p>Name: ${newPerson.name}</p><br>
+                                                    <p>Email: ${newPerson.email}</p><br>
+                                                    <p>Phone: ${newPerson.phone}</p><br>
+                                                    <p>Date: ${newPerson.date}</p><br>
+                                                    <p>Time: ${newPerson.time}</p><br>
+                                                    <p>Guests: ${newPerson.guests}</p><br>`;
+    
+    document.getElementById("name").value = "";                                                
+    document.getElementById("email").value = "";                                                
+    document.getElementById("phone").value = "";                                                
+    document.getElementById("date").value = "";                                                
+    document.getElementById("guests").value = "";                                                
 }

@@ -1,0 +1,41 @@
+.person {
+    position: absolute;
+    top: 120px;
+    left: 10%;
+    z-index: 200;
+    color: white;
+}
+
+.table {
+    position: absolute;
+    top: 270px;
+    left: 10%;
+    z-index: 200;
+    color: white;
+}
+
+.person-details {
+    position: absolute;
+    top: 370px;
+    left: 10%;
+    z-index: 200;
+    color: white;
+}
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: boluga;
+}
+button {
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: rgb(73, 17, 17);
+    font-size: 20px;
+    border: none;
+    color: white;
+    font-family: boluga;
+}
