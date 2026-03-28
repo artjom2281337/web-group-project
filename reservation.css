@@ -39,3 +39,16 @@ button {
     color: white;
     font-family: boluga;
 }
+
+main {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+
+    div {
+        height: 100vh;
+        background-image: url("images/pizza_pven.png");
+        background-size: cover;
+        filter: blur(3px);
+    }
+}

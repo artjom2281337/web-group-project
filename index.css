@@ -1,0 +1,31 @@
+main {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+
+    div {
+        height: 100vh;
+        background-image: url("images/pizza_pven.png");
+        background-size: cover;
+        filter: blur(3px);
+    }
+}
+
+#food-quote {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 33px;
+    color: white;
+    text-shadow: -3px -3px 3px #000, 3px -3px 3px #000, -3px 3px 3px #000, 3px 3px 3px #000;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.5s;
+    filter: opacity(0.75);
+}
+
+#food-quote-author {
+    font-size: 20px;
+}
