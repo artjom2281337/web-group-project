@@ -11,6 +11,7 @@ class Person {
 tableTimes = ["18:00", "19:00", "20:00", "21:00"];
 function returnTimes() {
     document.getElementById("table-h2").innerHTML = "Available Times";
+    document.getElementById("table").innerHTML = "";
     for (let i = 0; i < tableTimes.length; i++) {
         document.getElementById("table").innerHTML += `<button onclick="reserveTable('${tableTimes[i]}')">${tableTimes[i]}</button>`;
     }
@@ -21,6 +22,11 @@ function reserveTable(time) {
     phone = document.getElementById("phone").value;
     date = document.getElementById("date").value;
     guests = document.getElementById("guests").value;
+
+    if (name == "" || email == "" || phone == "" || date == "" || guests == "") {
+        alert("Please fill all the fields!");
+        return;
+    }
 
     let newPerson = new Person(name, email, phone, date, time, guests);
     document.getElementById("details").innerHTML = `<h3>Table Reservated!</h3><br>
