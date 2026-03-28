@@ -10,6 +10,10 @@ class Person {
 }
 tableTimes = ["18:00", "19:00", "20:00", "21:00"];
 function returnTimes() {
+    if (document.getElementById("date").value == "") {
+        alert("Please select a date!");
+        return;
+    }
     document.getElementById("table-h2").innerHTML = "Available Times";
     document.getElementById("table").innerHTML = "";
     for (let i = 0; i < tableTimes.length; i++) {
