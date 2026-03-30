@@ -25,8 +25,8 @@ function returnTimes() {
         return;
     }
     // https://dev.to/sanchithasr/3-ways-to-check-if-variable-is-a-number-in-javascript-5731
-    // if value of phone number is not a number, then user will be required to fill the valid phone number
-    if (isNaN(document.getElementById("phone").value)) {
+    // if value of phone number is not a number or phone number are less than 8 numbers, then user will be required to fill the valid phone number
+    if (isNaN(document.getElementById("phone").value) || document.getElementById("phone").value.length < 8) {
         alert("Please fill a valid phone number");
         return;
     }
