@@ -44,7 +44,7 @@ function reserveTable(time) {
     // creating newPerson object with input variables
     let newPerson = new Person(name, email, phone, date, time, guests);
     // returns the confirmation of reservation, user can see own input data
-    document.getElementById("details").innerHTML = `<h3>Table Reservated!</h3><br>
+    document.getElementById("details").innerHTML = `<h3>Table Reserved!</h3><br>
                                                     <p>Name: ${newPerson.name}</p><br>
                                                     <p>Email: ${newPerson.email}</p><br>
                                                     <p>Phone: ${newPerson.phone}</p><br>
