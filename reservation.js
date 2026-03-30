@@ -11,11 +11,17 @@ class Person {
 }
 // available table times for reservation
 tableTimes = ["18:00", "19:00", "20:00", "21:00"];
+let form = document.getElementById("form");
 // function returnTimes() - iterates over the available times and returns the table times
 function returnTimes() {
     // if values are empty, it alerts the user that user needs to fill all fields
     if (document.getElementById("name").value == "" || document.getElementById("email").value == "" || document.getElementById("phone").value == "" || document.getElementById("date").value == "" || document.getElementById("guests").value == "") {
         alert("Please fill all the fields!");
+        return;
+    }
+    // if number of guests equals 0 or less, user will be notified
+    if (document.getElementById("guests").value <= 0) {
+        alert("Please fill a valid number of guests");
         return;
     }
     // available times are appearing
@@ -58,3 +64,10 @@ function reserveTable(time) {
     document.getElementById("date").value = "";                                                
     document.getElementById("guests").value = "";                                                
 }
+// https://stackoverflow.com/questions/19454310/stop-form-refreshing-page-on-submit
+// prevents a form from refreshing after submission
+function handeForm(event) {
+    event.preventDefault(); 
+}
+// will call a function when form got submitted
+form.addEventListener('submit', handeForm);
